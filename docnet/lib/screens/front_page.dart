@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'doctor_login.dart';
 
 class FrontPage extends StatefulWidget {
@@ -58,7 +57,6 @@ class _FrontPageState extends State<FrontPage> {
                 ),
               ),
             ),
-            
           ],
         ),
       ),
