@@ -32,33 +32,32 @@ class _FrontPageState extends State<FrontPage> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            SizedBox(
-              width: 300, // <-- Your width
-              height: 50, // <-- Your height
-              child: ElevatedButton(
-                onPressed: () {},
-                child: const Text(
-                  "Login as Patient",
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            SizedBox(
-              width: 300, // <-- Your width
-              height: 50, // <-- Your height
-              child: ElevatedButton(
-                onPressed: () {},
-                child: const Text(
-                  "See Insurance Status",
-                ),
-              ),
-            ),
-            
+            // const SizedBox(
+            //   height: 10,
+            // ),
+            // SizedBox(
+            //   width: 300, // <-- Your width
+            //   height: 50, // <-- Your height
+            //   child: ElevatedButton(
+            //     onPressed: () {},
+            //     child: const Text(
+            //       "Login as Patient",
+            //     ),
+            //   ),
+            // ),
+            // const SizedBox(
+            //   height: 10,
+            // ),
+            // SizedBox(
+            //   width: 300, // <-- Your width
+            //   height: 50, // <-- Your height
+            //   child: ElevatedButton(
+            //     onPressed: () {},
+            //     child: const Text(
+            //       "See Insurance Status",
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),

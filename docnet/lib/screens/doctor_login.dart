@@ -12,6 +12,10 @@ class DoctorLogin extends StatefulWidget {
 class _DoctorLoginState extends State<DoctorLogin> {
   final _doctorUserIDcontroller = TextEditingController();
   final _doctorPasswordController = TextEditingController();
+
+  // Sign in with email and password
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,10 +27,14 @@ class _DoctorLoginState extends State<DoctorLogin> {
         child: Center(
           child: Column(
             children: [
-              const Padding(
+              Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                 child: // Note: Same code is applied for the TextFormField as well
                     TextField(
+                  onChanged: (value) {
+                    _doctorUserIDcontroller.text = value;
+                    print(value);
+                  },
                   // controller: _doctorUserIDcontroller,
                   decoration: InputDecoration(
                     hintText: "User ID",
@@ -39,11 +47,16 @@ class _DoctorLoginState extends State<DoctorLogin> {
                 ),
               ),
 
-              const Padding(
+              Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                 child: // Note: Same code is applied for the TextFormField as well
                     TextField(
+                  onChanged: (value) {
+                    _doctorPasswordController.text = value;
+                    print(value);
+                  },
                   // controller: _doctorPasswordController,
+                  obscureText: true,
                   decoration: InputDecoration(
                     hintText: "Password",
                     enabledBorder: OutlineInputBorder(
@@ -61,27 +74,16 @@ class _DoctorLoginState extends State<DoctorLogin> {
                   width: 300, // <-- Your width
                   height: 50, // <-- Your height
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                        
+                    },
                     child: const Text(
                       "Login ",
                     ),
                   ),
                 ),
               ),
-              // TextButton(
-              //   onPressed: () {
-              //     Navigator.push(
-              //       context,
-              //       MaterialPageRoute(
-              //         builder: (context) => CreateDoctor(),
-              //       ),
-              //     );
-              //   },
-              //   child: const Text(
-              //     "Create account",
-              //     style: TextStyle(color: Colors.blue),
-              //   ),
-              // ),
+              
             ],
           ),
         ),

@@ -24,3 +24,4 @@ def fireUpdate(Ref,Data,id):
     Ref.document(id).update(Data)
 
 print(fireRead(db.collection(u'Users'),u'1'))
+
