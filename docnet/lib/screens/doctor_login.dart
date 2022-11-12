@@ -35,83 +35,73 @@ class _DoctorLoginState extends State<DoctorLogin> {
         child: Center(
           child: Column(
             children: [
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-                child: // Note: Same code is applied for the TextFormField as well
-                    TextField(
-                  onChanged: (value) {
-                    // print(value);
-                    _doctorEmailcontroller.text = value;
-                  },
-                  textAlign: TextAlign.center,
-                  cursorColor: Colors.white,
-                  controller: _doctorEmailcontroller,
-                  decoration: const InputDecoration(
-                    hintText: "email ID",
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                          width: 3,
-                          color: Colors.lightBlueAccent), 
-                    ),
-                  ),
-                ),
-              ),
+              TextField(
+                onChanged: (value) {
+                  // print(value);
+                  _doctorEmailcontroller.text = value;
+                },
 
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-                child: // Note: Same code is applied for the TextFormField as well
-                    TextField(
-                  onChanged: (value) {
-                    // print(value);
-                    _doctorPasswordController.text = value;
-                  },
-                  obscureText: true,
-                  textAlign: TextAlign.center,
-                  controller: _doctorPasswordController,
-                  decoration: const InputDecoration(
-                    hintText: "Password",
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                          width: 3,
-                          color: Colors.lightBlueAccent), //<-- SEE HERE
-                    ),
+                textAlign: TextAlign.center,
+                // cursorColor: Colors.white,
+                controller: _doctorEmailcontroller,
+                decoration: const InputDecoration(
+                  hintText: "email ID",
+                  enabledBorder: OutlineInputBorder(
+                    borderSide:
+                        BorderSide(width: 3, color: Colors.lightBlueAccent),
                   ),
                 ),
               ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-                child: SizedBox(
-                  width: 300, // <-- Your width
-                  height: 50, // <-- Your height
-                  child: ElevatedButton(
-                    onPressed: () async {
-                      print("button pressed");
-                      try {
-                        bool shouldNavigate = await signIn(
-                            _doctorEmailcontroller.text,
-                            _doctorPasswordController.text);
-                        if (shouldNavigate) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => DoctorDashboard(),
-                            ),
-                          );
-                        }
-                      } catch (e) {
-                        print(e);
+              SizedBox(
+                height: 30,
+              ),
+              TextField(
+                cursorWidth: MediaQuery.of(context).size.width / 1.4,
+                onChanged: (value) {
+                  // print(value);
+                  _doctorPasswordController.text = value;
+                },
+                obscureText: true,
+                textAlign: TextAlign.center,
+                controller: _doctorPasswordController,
+                decoration: const InputDecoration(
+                  hintText: "Password",
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        width: 3, color: Colors.lightBlueAccent), //<-- SEE HERE
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              SizedBox(
+                width: 300, // <-- Your width
+                height: 50, // <-- Your height
+                child: ElevatedButton(
+                  onPressed: () async {
+                    print("button pressed");
+                    try {
+                      bool shouldNavigate = await signIn(
+                          _doctorEmailcontroller.text,
+                          _doctorPasswordController.text);
+                      if (shouldNavigate) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DoctorDashboard(),
+                          ),
+                        );
                       }
-                    },
-                    child: const Text(
-                      "Login",
-                    ),
+                    } catch (e) {
+                      print(e);
+                    }
+                  },
+                  child: const Text(
+                    "Login",
                   ),
                 ),
               ),
-             
             ],
           ),
         ),
