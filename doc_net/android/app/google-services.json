@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "734320394849",
+    "project_id": "docnet-alpha",
+    "storage_bucket": "docnet-alpha.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734320394849:android:c779ce9abf5f7d5b04e020",
+        "android_client_info": {
+          "package_name": "com.example.docnet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "734320394849-1n1p1heiratala519mhp81tdrn1q4fg6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.docnet",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "734320394849-kjhg4ftkvtbv31c3olhifbgpitdk6sji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMAfGKkmup1jtrVF5dJb5JSQYazqCU-oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734320394849-kjhg4ftkvtbv31c3olhifbgpitdk6sji.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "734320394849-0hgapjrp9l9e0osboovk5ok8qnk55ic1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.docnet"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734320394849:android:5a96ed52a5466d0704e020",
+        "android_client_info": {
+          "package_name": "com.mycompany.docnet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "734320394849-fgnpd7uleg7unv1vkge8p81pnfq307hq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.docnet",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "734320394849-kjhg4ftkvtbv31c3olhifbgpitdk6sji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMAfGKkmup1jtrVF5dJb5JSQYazqCU-oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734320394849-kjhg4ftkvtbv31c3olhifbgpitdk6sji.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "734320394849-0hgapjrp9l9e0osboovk5ok8qnk55ic1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.docnet"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

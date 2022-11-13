@@ -13,6 +13,8 @@ struct  user{
     string gender;
     string region;
     string uid;
+    
+    
 }
 user userstruct;
 
@@ -36,16 +38,46 @@ function newuser(string memory name,
     index[uid]=userstruct;
     }
     
+    mapping(string=>string[]) files;
     
+   
 
-
+     //retrieve customers data
     function fetch(string memory uid) public view returns(string memory ,string memory ,string memory ,string memory ,string memory ) 
     {
         return (index[uid].name,index[uid].dob,index[uid].bloodgroup,index[uid].gender,index[uid].region);
 
     }
 
-    
+
+//adds file hash to blockchain
+    function upadatefiles(string memory uid,string memory hash) public 
+    {
+       files[uid].push(hash);
+    }
+
+
+
+    //validates customers data
+    function verify(string memory uid,string  memory hash1) public  view returns(bool)
+    { 
+        uint n=files[uid].length;
+        uint i=0;
+        while(i<n)
+         {string memory s=files[uid][i];
+            if (keccak256(abi.encodePacked(hash1)) == keccak256(abi.encodePacked(s)))
+            return true;
+            i++;
+        }
+
+        return false;
+
+
+         
+
+    }
+
+
 
 
 }
