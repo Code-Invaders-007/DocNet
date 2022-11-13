@@ -66,10 +66,10 @@ Cloud Firestore is used to store:
 
 ![login](/Backend/Images/login.jpeg)
 
-'''
+```
 Login credential: akash@email.com
 password 123456
-'''
+```
 
 ## Home Screen
 
